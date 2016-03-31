@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable", "Rhyous.Db.Auditable\Rhyous.Db.Auditable.csproj", "{3325DF2B-5DA1-4767-A158-5B4E75560EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable.Tests", "Unit Tests\Rhyous.Db.Auditable.Tests\Rhyous.Db.Auditable.Tests.csproj", "{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

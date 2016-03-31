@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable", "..\Rhyous.Db.Auditable\Rhyous.Db.Auditable.csproj", "{3325DF2B-5DA1-4767-A158-5B4E75560EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable.Tests", "..\Unit Tests\Rhyous.Db.Auditable.Tests\Rhyous.Db.Auditable.Tests.csproj", "{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{4CD67FC1-A1F6-47D3-B1A4-A589BA9E5739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable.NuGet", "Rhyous.Db.Auditable.NuGet\Rhyous.Db.Auditable.NuGet.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0} = {3325DF2B-5DA1-4767-A158-5B4E75560EA0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable.NuGet.Sources", "Rhyous.Db.Auditable.NuGet.Sources\Rhyous.Db.Auditable.NuGet.Sources.csproj", "{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{AD9AF686-C5A4-4C6A-A7FA-5D2EFB36CE65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3325DF2B-5DA1-4767-A158-5B4E75560EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9} = {AD9AF686-C5A4-4C6A-A7FA-5D2EFB36CE65}
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389} = {4CD67FC1-A1F6-47D3-B1A4-A589BA9E5739}
+		{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1} = {4CD67FC1-A1F6-47D3-B1A4-A589BA9E5739}
+	EndGlobalSection
+EndGlobal
