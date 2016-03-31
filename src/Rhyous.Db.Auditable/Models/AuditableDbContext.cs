@@ -63,7 +63,7 @@ namespace Rhyous.Db.Auditable
         /// <returns>The id of the current user.</returns>
         public abstract int GetCurrentUserId();
 
-        internal void HandleAuditables(int userId)
+        public virtual void HandleAuditables(int userId)
         {
             if (!IsHistorical)
             {
