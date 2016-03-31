@@ -4,7 +4,7 @@
     <id>Rhyous.Db.Auditable.Sources</id>
     <version>1.0.0</version>
     <title>Rhyous.Db.Auditable.Sources</title>
-    <authors>jbarneck</authors>
+    <authors>Jared Barneck (Rhyous)</authors>
     <owners></owners>
     <description>Auditable framework for auditing dates and users in a database. Interfaces work for anything, but the intention is for a database. Some objects are Entity Framework enhancements.</description>
     <releaseNotes></releaseNotes>
