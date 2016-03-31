@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AuditableDbContext.cs" />
-    <Compile Include="Models\AuditableDbSet.cs" />
     <Compile Include="Models\AuditableEntity.cs" />
     <Compile Include="Interfaces\IAuditableCreateDate.cs" />
     <Compile Include="Interfaces\IAuditableCreatedBy.cs" />
