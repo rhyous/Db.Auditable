@@ -21,7 +21,7 @@ namespace Rhyous.Db.Auditable.Tests
                 dbContext.People.Add(person);
 
                 // Act
-                dbContext.HandleAuditables();
+                dbContext.HandleAuditables(dbContext.User100);
 
                 // Assert
                 Assert.IsTrue(DateTime.Now - person.CreateDate < AcceptableTimeSpan);
@@ -43,12 +43,12 @@ namespace Rhyous.Db.Auditable.Tests
                 dbContext.Entry(person).State = EntityState.Modified;
 
                 // Act
-                dbContext.HandleAuditables();
+                dbContext.HandleAuditables(dbContext.User200);
 
                 // Assert
                 Assert.IsTrue(DateTime.Now - person.LastUpdated < AcceptableTimeSpan);
                 Assert.AreEqual(default(DateTime), person.CreateDate);
-                Assert.AreEqual(dbContext.User100, person.LastUpdatedBy);
+                Assert.AreEqual(dbContext.User200, person.LastUpdatedBy);
                 Assert.AreEqual(0, person.CreatedBy);
             }
         }
