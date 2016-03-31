@@ -48,7 +48,12 @@ namespace Rhyous.Db.Auditable
 
         public override int SaveChanges()
         {
-            HandleAuditables();
+            return SaveChanges(GetCurrentUserId());
+        }
+
+        public int SaveChanges(int userId)
+        {
+            HandleAuditables(userId);
             return base.SaveChanges();
         }
 
@@ -58,7 +63,7 @@ namespace Rhyous.Db.Auditable
         /// <returns>The id of the current user.</returns>
         public abstract int GetCurrentUserId();
 
-        internal void HandleAuditables()
+        internal void HandleAuditables(int userId)
         {
             if (!IsHistorical)
             {
