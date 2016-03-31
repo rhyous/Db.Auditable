@@ -21,7 +21,7 @@
       </group>
     </dependencies>
     <references></references>
-    <tags></tags>
+    <tags>Database db audit auditable user date</tags>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
