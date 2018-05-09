@@ -5,19 +5,20 @@ using System.Linq;
 
 namespace Rhyous.Db.Auditable
 {
-    public class AuditablesHandler
+    public class AuditablesHandler<TId>
+        where TId : struct
     {
-        public static void HandleAuditableCreatedBy(DbChangeTracker tracker, int userId)
+        public static void HandleAuditableCreatedBy(DbChangeTracker tracker, TId userId)
         {
-            foreach (var auditableEntity in tracker.Entries<IAuditableCreatedBy>().Where(auditableEntity => auditableEntity.State == EntityState.Added))
+            foreach (var auditableEntity in tracker.Entries<IAuditableCreatedBy<TId>>().Where(auditableEntity => auditableEntity.State == EntityState.Added))
             {
                 auditableEntity.Entity.CreatedBy = userId;
             }
         }
 
-        public static void HandleAuditableLastUpdatedBy(DbChangeTracker tracker, int userId)
+        public static void HandleAuditableLastUpdatedBy(DbChangeTracker tracker, TId userId)
         {
-            foreach (var auditableEntity in tracker.Entries<IAuditableLastUpdatedBy>().Where(auditableEntity => auditableEntity.State == EntityState.Modified))
+            foreach (var auditableEntity in tracker.Entries<IAuditableLastUpdatedBy<TId>>().Where(auditableEntity => auditableEntity.State == EntityState.Modified))
             {
                 auditableEntity.Entity.LastUpdatedBy = userId;
             }

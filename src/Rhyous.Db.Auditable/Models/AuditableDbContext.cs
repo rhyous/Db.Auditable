@@ -5,7 +5,8 @@ using System.Data.Entity.Infrastructure;
 
 namespace Rhyous.Db.Auditable
 {
-    public abstract class AuditableDbContext : DbContext
+    public abstract class AuditableDbContext<TId> : DbContext
+        where TId : struct
     {
 
         #region Constructors
@@ -51,7 +52,7 @@ namespace Rhyous.Db.Auditable
             return SaveChanges(GetCurrentUserId());
         }
 
-        public int SaveChanges(int userId)
+        public int SaveChanges(TId userId)
         {
             HandleAuditables(userId);
             return base.SaveChanges();
@@ -61,16 +62,16 @@ namespace Rhyous.Db.Auditable
         /// This method must get the UserId.
         /// </summary>
         /// <returns>The id of the current user.</returns>
-        public abstract int GetCurrentUserId();
+        public abstract TId GetCurrentUserId();
 
-        public virtual void HandleAuditables(int userId)
+        public virtual void HandleAuditables(TId userId)
         {
             if (!IsHistorical)
             {
-                AuditablesHandler.HandleAuditableCreatedBy(ChangeTracker, GetCurrentUserId());
-                AuditablesHandler.HandleAuditableLastUpdatedBy(ChangeTracker, GetCurrentUserId());
-                AuditablesHandler.HandleAuditableCreateDate(ChangeTracker);
-                AuditablesHandler.HandleAuditableLastUpdated(ChangeTracker);
+                AuditablesHandler<TId>.HandleAuditableCreatedBy(ChangeTracker, GetCurrentUserId());
+                AuditablesHandler<TId>.HandleAuditableLastUpdatedBy(ChangeTracker, GetCurrentUserId());
+                AuditablesHandler<TId>.HandleAuditableCreateDate(ChangeTracker);
+                AuditablesHandler<TId>.HandleAuditableLastUpdated(ChangeTracker);
             }
         }
     }

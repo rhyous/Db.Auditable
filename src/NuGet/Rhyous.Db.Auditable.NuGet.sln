@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rhyous.Db.Auditable", "..\Rhyous.Db.Auditable\Rhyous.Db.Auditable.csproj", "{3325DF2B-5DA1-4767-A158-5B4E75560EA0}"
 EndProject
@@ -46,5 +46,8 @@ Global
 		{CD8500F1-1D8D-43C8-8535-54DBAB2A33B9} = {AD9AF686-C5A4-4C6A-A7FA-5D2EFB36CE65}
 		{0451BAEF-DF2E-4B98-8644-94EE9415E389} = {4CD67FC1-A1F6-47D3-B1A4-A589BA9E5739}
 		{2F7D8CD0-E79F-47BB-863D-FD32D46FE6A1} = {4CD67FC1-A1F6-47D3-B1A4-A589BA9E5739}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0123E62-3CA5-4E20-8273-9AF5B706E913}
 	EndGlobalSection
 EndGlobal

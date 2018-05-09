@@ -1,6 +1,9 @@
+using System;
+
 namespace Rhyous.Db.Auditable
 {
-    public interface IAuditableLastUpdatedBy
+    public interface IAuditableLastUpdatedBy<TId>
+        where TId : struct
     {
         /// <summary>
         /// The user who updated the row most recently. This value
@@ -9,6 +12,6 @@ namespace Rhyous.Db.Auditable
         /// database column name if needed. 
         /// Example: [Column("ModifiedBy")]
         /// </summary>
-        int? LastUpdatedBy { get; set; }
+        TId? LastUpdatedBy { get; set; }
     }
 }

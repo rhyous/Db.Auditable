@@ -1,6 +1,6 @@
 namespace Rhyous.Db.Auditable
 {
-    public interface IAuditableCreatedBy
+    public interface IAuditableCreatedBy<TId>
     {
         /// <summary>
         /// The user who created the row.
@@ -8,6 +8,6 @@ namespace Rhyous.Db.Auditable
         /// database column name if needed. 
         /// Example: [Column("User")]
         /// </summary>
-        int CreatedBy { get; set; }
+        TId CreatedBy { get; set; }
     }
 }

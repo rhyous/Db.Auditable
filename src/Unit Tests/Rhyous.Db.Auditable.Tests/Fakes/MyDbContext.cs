@@ -2,7 +2,7 @@
 
 namespace Rhyous.Db.Auditable.Tests.Fakes
 {
-    public class MyDbContext : AuditableDbContext
+    public class MyDbContext : AuditableDbContext<int>
     {
         internal int User100 = 100;
         internal int User200 = 200;
